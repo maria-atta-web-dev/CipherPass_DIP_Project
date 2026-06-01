@@ -1,0 +1,194 @@
+================================================================================
+POWERPOINT SLIDES — Pakistan Bank KYC & AML System (DIP)
+Copy each SLIDE block into PowerPoint. Add screenshots from the running app.
+================================================================================
+
+SLIDE 1 — TITLE
+----------------
+Title: Pakistan Bank KYC & Fraud Detection System
+Subtitle: Digital Image Processing (DIP) | AML Criminal Record Check | FIA Compliance
+[Your Name] | [Roll No] | [Department] | [University]
+Visual: Screenshot of main application window
+
+SLIDE 2 — WHAT IS KYC?
+-----------------------
+Title: What is KYC?
+
+KYC = Know Your Customer
+- Bank verifies identity BEFORE opening account
+- Pakistan: NADRA CNIC (front + back), face, signature
+- AML = Anti-Money Laundering: check criminal/fraud lists
+
+Our system automates: CNIC scan -> enhance (DIP) -> criminal check -> face -> decision
+
+SLIDE 3 — INDUSTRY USE (PAKISTAN)
+----------------------------------
+Title: Where Is This Used in Pakistan?
+
+- Banks: HBL, UBL, Meezan Bank — account opening at branch
+- Mobile wallets: JazzCash, Easypaisa — CNIC + selfie verification
+- NADRA: National ID (CNIC) is the core identity document
+- SBP: State Bank requires KYC & Anti-Money Laundering (AML) checks
+- FIA: Federal Investigation Agency — Criminal & financial crime screening
+
+One line: Before opening an account, the bank must know WHO the customer is
+and IF they are a fraud/criminal risk.
+
+SLIDE 4 — PROBLEM STATEMENT
+-----------------------------
+Title: Problem Statement
+
+Manual KYC in Pakistani banks:
+- Slow queues at branches
+- Fake CNIC and forged documents
+- No instant link to FIA/criminal history
+- Cannot detect duplicate/repeat fraud attempts
+- SBP penalties if AML checks are skipped
+
+Our solution: Automated CNIC + face + document check with criminal record lookup,
+duplicate detection, and DIP-based forgery analysis.
+
+SLIDE 5 — OBJECTIVES
+---------------------
+Title: Project Objectives
+
+1. Build 5-module banking KYC verification system
+2. Apply DIP concepts (grayscale, Canny, CLAHE, Laplacian, Haar Cascade)
+3. Integrate criminal/fraud database (AML + FIA simulation)
+4. Detect duplicate verifications (account takeover fraud)
+5. Pakistan CNIC format validation (NADRA style)
+6. Compliance officer workflow with REPORT_FIA action
+
+SLIDE 6 — SYSTEM ARCHITECTURE (5 MODULES)
+-------------------------------------------
+Title: 5-Module Architecture
+
+[Diagram: boxes 1 to 5]
+
+1. User Input        — CNIC upload, face capture, manual data entry
+2. DIP Preprocessing — Grayscale, blur, Canny, CLAHE, Laplacian
+3. Face Verification — Haar Cascade detection + liveness check
+4. Database Check    — Bank DB + FIA criminal watchlist + duplicate detection
+5. Risk Engine       — Trust score + APPROVE/REJECT/REPORT_FIA + archive
+
+SLIDE 7 — DIP CONCEPTS (MAIN ACADEMIC FOCUS)
+----------------------------------------------
+Title: Digital Image Processing Concepts Used
+
+#  | Concept                 | Use in Project
+---|-------------------------|------------------------------------------
+1  | Grayscale conversion    | All modules — standardize image format
+2  | Histogram Equalization  | Face detection — fix poor lighting
+3  | Gaussian Blur           | Noise reduction before edge detection
+4  | Canny Edge Detection    | CNIC boundary detection & forgery check
+5  | CLAHE                   | Enhance local contrast on CNIC images
+6  | Laplacian Variance      | Liveness check — detect blurry/printed photos
+7  | Haar Cascade            | Real-time face bounding boxes on webcam
+8  | Contour Detection       | Document shape and region analysis
+9  | Perspective Transform   | CNIC deskewing and alignment
+
+Demo: "Show DIP Processing Steps" button — 6 images displayed on screen
+
+SLIDE 8 — CRIMINAL RECORD & AML (FIA/PAKISTAN)
+------------------------------------------------
+Title: AML Screening — Criminal & Fraud Database
+
+When CNIC is entered:
+- Lookup bank customer database (citizen_database.json)
+- Lookup criminal/fraud watchlist (criminal_records.json — FIA-style demo data)
+- Count previous verifications — 3+ attempts = DUPLICATE FRAUD ALERT
+- Decision: APPROVE | MANUAL REVIEW | REJECT
+
+Compliance Officer Actions:
+- REJECT       — Block account opening
+- ESCALATE     — Send to branch manager
+- INVESTIGATE  — Request more documents
+- REPORT_FIA   — Report to Federal Investigation Agency
+- HOLD         — Pending further review
+
+SLIDE 9 — DEMO CNICS
+---------------------
+Title: Test Cases
+
+CLEAN (APPROVE):
+  42101-1234567-1 -> Ahmed Raza -> No criminal record -> APPROVE
+
+CRIMINALS (AUTO-REJECT):
+  12345-6789012-3 -> Identity Fraud + Document Forgery
+  11111-2222222-3 -> Bank Fraud + Money Laundering
+  33201-7777777-7 -> SIM Fraud + Cybercrime
+  44401-8888888-8 -> ATM Card Cloning
+  43301-1212121-3 -> International Sanctions Violation
+
+MANUAL REVIEW:
+  54321-0987654-1 -> Signature Forgery
+  41101-5555555-5 -> Loan Default + Cheque Bounce
+
+DUPLICATE TEST:
+  Verify any CNIC 3+ times -> Duplicate Fraud Alert triggered
+
+SLIDE 10 — TECHNOLOGY STACK
+-----------------------------
+Title: Technology
+
+- Python 3.11
+- OpenCV (cv2)  — DIP & computer vision
+- PyQt5         — Bank teller interface
+- NumPy         — Image mathematics
+- JSON files    — Customer & criminal databases
+
+SLIDE 11 — CODE STRUCTURE (FOR VIVA)
+--------------------------------------
+Title: Main Code Files
+
+File                  | Role
+----------------------|------------------------------------------
+main.py               | GUI + 5-module verification flow
+dip_pipeline.py       | DIP 6-step demo pipeline
+face_module.py        | Face detection + liveness
+document_module.py    | CNIC document analysis
+customer_screening.py | CNIC lookup + AML + duplicate detection
+scoring.py            | Trust score algorithm
+pakistan_kyc.py       | CNIC format validation + SBP context
+cnic_archive.py       | Session history + archive
+
+SLIDE 12 — LIVE DEMO PLAN
+--------------------------
+Title: Demonstration Steps (5 min)
+
+1. Enter clean CNIC 42101-1234567-1 -> Lookup -> APPROVE
+2. Enter criminal CNIC 12345-6789012-3 -> Criminal warning popup -> REJECT
+3. Upload CNIC -> Show DIP Processing Steps (6 images)
+4. Capture face -> START VERIFICATION -> Trust score + compliance review
+5. Demonstrate REPORT_FIA action in compliance dialog
+
+SLIDE 13 — RESULTS
+-------------------
+Title: Results
+
+- Instant AML + FIA criminal lookup by CNIC
+- Pre-verification criminal warning popup
+- Duplicate/repeat fraud detection alert
+- Trust score 0-100 with risk level
+- Compliance officer workflow with FIA reporting
+- Session history saved in verification_data/
+- DIP pipeline visible to examiner
+
+SLIDE 14 — CONCLUSION
+----------------------
+Title: Conclusion
+
+Successfully built a Pakistan banking KYC prototype using DIP for document/face
+analysis and AML/FIA criminal screening. The system detects criminals before
+verification, flags duplicate attempts, and provides a full compliance workflow
+including reporting to the Federal Investigation Agency (FIA).
+
+SLIDE 15 — THANK YOU / Q&A
+---------------------------
+Questions?
+
+Contact: [Your details]
+
+================================================================================
+END — Add 3 screenshots: Criminal warning popup, DIP Steps grid, Compliance dialog
+================================================================================

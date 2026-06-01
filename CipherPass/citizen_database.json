@@ -1,0 +1,93 @@
+{
+  "42101-1234567-1": {
+    "name": "Ahmed Raza",
+    "father": "Muhammad Raza",
+    "cnic": "42101-1234567-1",
+    "address": "House #123, Gulshan-e-Iqbal, Karachi",
+    "phone": "0333-1234567",
+    "dob": "15/08/1990",
+    "trust_score": 98,
+    "registered_date": "10/01/2015",
+    "verified": true,
+    "account_type": "Savings"
+  },
+  "35202-2345678-2": {
+    "name": "Fatima Khan",
+    "father": "Ali Khan",
+    "cnic": "35202-2345678-2",
+    "address": "Flat #8, North Nazimabad, Karachi",
+    "phone": "0321-7654321",
+    "dob": "22/03/1992",
+    "trust_score": 95,
+    "registered_date": "15/05/2016",
+    "verified": true,
+    "account_type": "Current"
+  },
+  "12345-6789012-3": {
+    "name": "Hassan Ali (Flagged)",
+    "father": "Muhammad Ali",
+    "cnic": "12345-6789012-3",
+    "address": "Unknown \u00e2\u20ac\u201d flagged applicant",
+    "phone": "0300-0000000",
+    "dob": "01/01/1985",
+    "trust_score": 25,
+    "registered_date": "20/01/2020",
+    "verified": false,
+    "account_type": "Blocked"
+  },
+  "11111-2222222-3": {
+    "name": "Kamran Shah (High Risk)",
+    "father": "Shahid Khan",
+    "cnic": "11111-2222222-3",
+    "address": "Lahore \u00e2\u20ac\u201d under investigation",
+    "phone": "0311-9999999",
+    "dob": "05/05/1980",
+    "trust_score": 15,
+    "registered_date": "01/03/2019",
+    "verified": false,
+    "account_type": "Blocked"
+  },
+  "54321-0987654-1": {
+    "name": "Sara Malik",
+    "father": "Malik Hussain",
+    "cnic": "54321-0987654-1",
+    "address": "Islamabad, Sector G-11",
+    "phone": "0345-5555555",
+    "dob": "18/09/1988",
+    "trust_score": 60,
+    "registered_date": "12/07/2021",
+    "verified": true,
+    "account_type": "Savings"
+  },
+  "38201-8938516-0": {
+    "cnic": "38201-8938516-0",
+    "name": "Maria Atta",
+    "father_name": "Atta Muhammad",
+    "date_of_birth": "12/06/2006",
+    "address": "vbvb",
+    "father": "Atta Muhammad",
+    "dob": "12/06/2006",
+    "trust_score": 85
+  },
+  "38404-6757786-8": {
+    "name": "ASma",
+    "father": "muhammad",
+    "father_name": "muhammad",
+    "cnic": "38404-6757786-8",
+    "address": "68ugfsdcsn",
+    "dob": "12/06/2077",
+    "trust_score": 85,
+    "registered_date": "21/05/2026 17:35",
+    "verified": true
+  },
+  "30266-0737327-8": {
+    "cnic": "30266-0737327-8",
+    "name": "jsjd",
+    "father_name": "dhwjdg",
+    "date_of_birth": "12/67/32",
+    "address": "bshgs",
+    "father": "dhwjdg",
+    "dob": "12/67/32",
+    "trust_score": 85
+  }
+}

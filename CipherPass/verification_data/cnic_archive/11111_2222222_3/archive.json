@@ -1,0 +1,20 @@
+{
+  "cnic": "11111-2222222-3",
+  "saved_at": "2026-06-01T10:54:25.974831",
+  "image_paths": {
+    "front_raw": "verification_data\\cnic_archive\\11111_2222222_3\\front_raw.jpg",
+    "front_enhanced": "verification_data\\cnic_archive\\11111_2222222_3\\front_enhanced.jpg",
+    "back_raw": "verification_data\\cnic_archive\\11111_2222222_3\\back_raw.jpg",
+    "face": "verification_data\\cnic_archive\\11111_2222222_3\\face.jpg",
+    "doc": "verification_data\\cnic_archive\\11111_2222222_3\\doc.jpg"
+  },
+  "extracted_data": {
+    "cnic": "11111-2222222-3",
+    "name": "Kamran Shah (High Risk)",
+    "father_name": "Shahid Khan",
+    "date_of_birth": "05/05/1980",
+    "address": "Lahore \u00e2\u20ac\u201d under investigation"
+  },
+  "verification_count": 1,
+  "first_saved_at": "2026-06-01T10:54:25.974831"
+}

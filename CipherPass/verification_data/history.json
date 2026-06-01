@@ -1,0 +1,359 @@
+{
+  "sessions": [
+    {
+      "timestamp": "2026-05-25T11:51:11.199498",
+      "cnic": "38201-8938516-0",
+      "manual_data": {
+        "cnic": "38201-8938516-0",
+        "name": "Maria Atta",
+        "father_name": "Atta Muhammad",
+        "date_of_birth": "12/06/2006",
+        "address": "vbvb"
+      },
+      "trust_score": 89,
+      "risk_level": "low",
+      "is_correct_person": true,
+      "is_verified": true,
+      "criminal_record": {
+        "has_criminal_record": false,
+        "crimes": [],
+        "risk_level": "low",
+        "no_data": true
+      },
+      "flags": [],
+      "archive_folder": "verification_data\\cnic_archive\\38201_8938516_0"
+    },
+    {
+      "timestamp": "2026-05-25T11:52:06.683110",
+      "cnic": "12345-6789012-3",
+      "manual_data": {
+        "cnic": "12345-6789012-3",
+        "name": "Hassan Ali (Flagged)",
+        "father_name": "Muhammad Ali",
+        "date_of_birth": "01/01/1985",
+        "address": "Unknown \u00e2\u20ac\u201d flagged applicant"
+      },
+      "trust_score": 24,
+      "risk_level": "high",
+      "is_correct_person": true,
+      "is_verified": true,
+      "criminal_record": {
+        "has_criminal_record": true,
+        "crimes": [
+          {
+            "type": "Identity Fraud",
+            "date": "2023-08-10",
+            "description": "Used fake identity documents to open bank accounts fraudulently",
+            "status": "convicted",
+            "penalty": "2 years imprisonment, PKR 500,000 fine"
+          },
+          {
+            "type": "Document Forgery",
+            "date": "2022-03-15",
+            "description": "Forged CNIC and passport for loan application (loan amount: PKR 800,000)",
+            "status": "convicted",
+            "penalty": "3 years imprisonment"
+          }
+        ],
+        "risk_level": "high",
+        "last_updated": "2026-02-20",
+        "source": "FIA Fraud Registry / SBP Watchlist",
+        "status": "AUTO-REJECT - Multiple Convictions",
+        "flags": [
+          "CONVICTED_FRAUDSTER",
+          "REPEAT_OFFENDER",
+          "AML_VIOLATION"
+        ]
+      },
+      "flags": [],
+      "archive_folder": "verification_data\\cnic_archive\\12345_6789012_3"
+    },
+    {
+      "timestamp": "2026-06-01T05:25:09.978256",
+      "cnic": "12345-6789012-3",
+      "manual_data": {
+        "cnic": "12345-6789012-3",
+        "name": "Hassan Ali (Flagged)",
+        "father_name": "Muhammad Ali",
+        "date_of_birth": "01/01/1985",
+        "address": "Unknown \u00e2\u20ac\u201d flagged applicant"
+      },
+      "trust_score": 24,
+      "risk_level": "high",
+      "is_correct_person": true,
+      "is_verified": true,
+      "criminal_record": {
+        "has_criminal_record": true,
+        "crimes": [
+          {
+            "type": "Identity Fraud",
+            "date": "2023-08-10",
+            "description": "Used fake identity documents to open bank accounts fraudulently",
+            "status": "convicted",
+            "penalty": "2 years imprisonment, PKR 500,000 fine"
+          },
+          {
+            "type": "Document Forgery",
+            "date": "2022-03-15",
+            "description": "Forged CNIC and passport for loan application (loan amount: PKR 800,000)",
+            "status": "convicted",
+            "penalty": "3 years imprisonment"
+          }
+        ],
+        "risk_level": "high",
+        "last_updated": "2026-02-20",
+        "source": "FIA Fraud Registry / SBP Watchlist",
+        "status": "AUTO-REJECT - Multiple Convictions",
+        "flags": [
+          "CONVICTED_FRAUDSTER",
+          "REPEAT_OFFENDER",
+          "AML_VIOLATION"
+        ]
+      },
+      "flags": [],
+      "archive_folder": "verification_data\\cnic_archive\\12345_6789012_3"
+    },
+    {
+      "timestamp": "2026-06-01T05:39:03.345511",
+      "cnic": "12345-6789012-3",
+      "manual_data": {
+        "cnic": "12345-6789012-3",
+        "name": "dgdf",
+        "father_name": "vbv",
+        "date_of_birth": "12/08/9000",
+        "address": "hgf"
+      },
+      "trust_score": 0,
+      "risk_level": "high",
+      "is_correct_person": false,
+      "is_verified": true,
+      "criminal_record": {
+        "has_criminal_record": true,
+        "crimes": [
+          {
+            "type": "Identity Fraud",
+            "date": "2023-08-10",
+            "description": "Used fake identity documents to open bank accounts fraudulently",
+            "status": "convicted",
+            "penalty": "2 years imprisonment, PKR 500,000 fine"
+          },
+          {
+            "type": "Document Forgery",
+            "date": "2022-03-15",
+            "description": "Forged CNIC and passport for loan application (loan amount: PKR 800,000)",
+            "status": "convicted",
+            "penalty": "3 years imprisonment"
+          }
+        ],
+        "risk_level": "high",
+        "last_updated": "2026-02-20",
+        "source": "FIA Fraud Registry / SBP Watchlist",
+        "status": "AUTO-REJECT - Multiple Convictions",
+        "flags": [
+          "CONVICTED_FRAUDSTER",
+          "REPEAT_OFFENDER",
+          "AML_VIOLATION"
+        ]
+      },
+      "flags": [
+        "\u274c Face verification failed \u2014 Identity mismatch"
+      ],
+      "archive_folder": "verification_data\\cnic_archive\\12345_6789012_3"
+    },
+    {
+      "timestamp": "2026-06-01T09:57:59.397422",
+      "cnic": "38201-8938516-0",
+      "manual_data": {
+        "cnic": "38201-8938516-0",
+        "name": "Maria Atta",
+        "father_name": "Atta Muhammad",
+        "date_of_birth": "12/06/2006",
+        "address": "vbvb"
+      },
+      "trust_score": 54,
+      "risk_level": "medium",
+      "is_correct_person": true,
+      "is_verified": true,
+      "criminal_record": {
+        "has_criminal_record": false,
+        "crimes": [],
+        "risk_level": "low",
+        "no_data": true
+      },
+      "flags": [
+        "\u274c Face verification failed \u2014 Identity mismatch"
+      ],
+      "archive_folder": "verification_data\\cnic_archive\\38201_8938516_0"
+    },
+    {
+      "timestamp": "2026-06-01T10:54:25.992820",
+      "cnic": "11111-2222222-3",
+      "manual_data": {
+        "cnic": "11111-2222222-3",
+        "name": "Kamran Shah (High Risk)",
+        "father_name": "Shahid Khan",
+        "date_of_birth": "05/05/1980",
+        "address": "Lahore \u00e2\u20ac\u201d under investigation"
+      },
+      "trust_score": 0,
+      "risk_level": "high",
+      "is_correct_person": true,
+      "is_verified": true,
+      "criminal_record": {
+        "has_criminal_record": true,
+        "crimes": [
+          {
+            "type": "Bank Fraud",
+            "date": "2023-11-25",
+            "description": "Participated in large-scale bank fraud scheme affecting 47 customers",
+            "status": "convicted",
+            "penalty": "5 years imprisonment, PKR 2,000,000 fine"
+          },
+          {
+            "type": "Money Laundering",
+            "date": "2024-02-14",
+            "description": "Laundered money through multiple bank accounts (amount: PKR 15 crores)",
+            "status": "under_investigation",
+            "penalty": "Pending trial"
+          },
+          {
+            "type": "Identity Theft",
+            "date": "2022-09-30",
+            "description": "Stole identities of 12 victims to obtain credit cards and make fraudulent purchases",
+            "status": "convicted",
+            "penalty": "4 years imprisonment"
+          }
+        ],
+        "risk_level": "high",
+        "last_updated": "2026-05-01",
+        "source": "FIA Fraud Registry / Counter-Terrorism Department",
+        "status": "AUTO-REJECT - HIGH RISK OFFENDER",
+        "flags": [
+          "ACTIVE_INVESTIGATION",
+          "MONEY_LAUNDERING",
+          "TERRORISM_LINK",
+          "IDENTITY_THEFT"
+        ]
+      },
+      "flags": [
+        "\u274c Face verification failed \u2014 Identity mismatch"
+      ],
+      "archive_folder": "verification_data\\cnic_archive\\11111_2222222_3"
+    },
+    {
+      "timestamp": "2026-06-01T13:31:51.222462",
+      "cnic": "38201-8938516-0",
+      "manual_data": {
+        "cnic": "38201-8938516-0",
+        "name": "Maria Atta",
+        "father_name": "Atta Muhammad",
+        "date_of_birth": "12/06/2006",
+        "address": "vbvb"
+      },
+      "trust_score": 89,
+      "risk_level": "low",
+      "is_correct_person": true,
+      "is_verified": true,
+      "criminal_record": {
+        "has_criminal_record": false,
+        "crimes": [],
+        "risk_level": "low",
+        "no_data": true
+      },
+      "flags": [],
+      "archive_folder": "verification_data\\cnic_archive\\38201_8938516_0"
+    },
+    {
+      "timestamp": "2026-06-01T13:33:36.877698",
+      "cnic": "12345-6789012-3",
+      "manual_data": {
+        "cnic": "12345-6789012-3",
+        "name": "Hassan Ali (Flagged)",
+        "father_name": "Muhammad Ali",
+        "date_of_birth": "01/01/1985",
+        "address": "Unknown \u00e2\u20ac\u201d flagged applicant"
+      },
+      "trust_score": 24,
+      "risk_level": "high",
+      "is_correct_person": true,
+      "is_verified": true,
+      "criminal_record": {
+        "has_criminal_record": true,
+        "crimes": [
+          {
+            "type": "Identity Fraud",
+            "date": "2023-08-10",
+            "description": "Used fake identity documents to open bank accounts fraudulently",
+            "status": "convicted",
+            "penalty": "2 years imprisonment, PKR 500,000 fine"
+          },
+          {
+            "type": "Document Forgery",
+            "date": "2022-03-15",
+            "description": "Forged CNIC and passport for loan application (loan amount: PKR 800,000)",
+            "status": "convicted",
+            "penalty": "3 years imprisonment"
+          }
+        ],
+        "risk_level": "high",
+        "last_updated": "2026-02-20",
+        "source": "FIA Fraud Registry / SBP Watchlist",
+        "status": "AUTO-REJECT - Multiple Convictions",
+        "flags": [
+          "CONVICTED_FRAUDSTER",
+          "REPEAT_OFFENDER",
+          "AML_VIOLATION"
+        ]
+      },
+      "flags": [],
+      "archive_folder": "verification_data\\cnic_archive\\12345_6789012_3"
+    },
+    {
+      "timestamp": "2026-06-01T13:39:22.085576",
+      "cnic": "12345-6789012-3",
+      "manual_data": {
+        "cnic": "12345-6789012-3",
+        "name": "Hassan Ali (Flagged)",
+        "father_name": "Muhammad Ali",
+        "date_of_birth": "01/01/1985",
+        "address": "Unknown \u00e2\u20ac\u201d flagged applicant"
+      },
+      "trust_score": 0,
+      "risk_level": "high",
+      "is_correct_person": true,
+      "is_verified": true,
+      "criminal_record": {
+        "has_criminal_record": true,
+        "crimes": [
+          {
+            "type": "Identity Fraud",
+            "date": "2023-08-10",
+            "description": "Used fake identity documents to open bank accounts fraudulently",
+            "status": "convicted",
+            "penalty": "2 years imprisonment, PKR 500,000 fine"
+          },
+          {
+            "type": "Document Forgery",
+            "date": "2022-03-15",
+            "description": "Forged CNIC and passport for loan application (loan amount: PKR 800,000)",
+            "status": "convicted",
+            "penalty": "3 years imprisonment"
+          }
+        ],
+        "risk_level": "high",
+        "last_updated": "2026-02-20",
+        "source": "FIA Fraud Registry / SBP Watchlist",
+        "status": "AUTO-REJECT - Multiple Convictions",
+        "flags": [
+          "CONVICTED_FRAUDSTER",
+          "REPEAT_OFFENDER",
+          "AML_VIOLATION"
+        ]
+      },
+      "flags": [
+        "\u274c Face verification failed \u2014 Identity mismatch"
+      ],
+      "archive_folder": "verification_data\\cnic_archive\\12345_6789012_3"
+    }
+  ]
+}

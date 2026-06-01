@@ -1,0 +1,115 @@
+{
+  "decisions": [
+    {
+      "timestamp": "2026-05-25T11:52:29.989997",
+      "cnic": "12345-6789012-3",
+      "customer_name": "Hassan Ali (Flagged)",
+      "action": "REPORT_FIA",
+      "officer_name": "dhjhh",
+      "notes": "sdsd",
+      "trust_score": 24,
+      "criminal_record": {
+        "has_criminal_record": true,
+        "crimes": [
+          {
+            "type": "Identity Fraud",
+            "date": "2023-08-10",
+            "description": "Used fake identity documents to open bank accounts fraudulently",
+            "status": "convicted",
+            "penalty": "2 years imprisonment, PKR 500,000 fine"
+          },
+          {
+            "type": "Document Forgery",
+            "date": "2022-03-15",
+            "description": "Forged CNIC and passport for loan application (loan amount: PKR 800,000)",
+            "status": "convicted",
+            "penalty": "3 years imprisonment"
+          }
+        ],
+        "risk_level": "high",
+        "last_updated": "2026-02-20",
+        "source": "FIA Fraud Registry / SBP Watchlist",
+        "status": "AUTO-REJECT - Multiple Convictions",
+        "flags": [
+          "CONVICTED_FRAUDSTER",
+          "REPEAT_OFFENDER",
+          "AML_VIOLATION"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-06-01T05:25:45.801568",
+      "cnic": "12345-6789012-3",
+      "customer_name": "Hassan Ali (Flagged)",
+      "action": "ESCALATE",
+      "officer_name": "hg",
+      "notes": "fgf",
+      "trust_score": 24,
+      "criminal_record": {
+        "has_criminal_record": true,
+        "crimes": [
+          {
+            "type": "Identity Fraud",
+            "date": "2023-08-10",
+            "description": "Used fake identity documents to open bank accounts fraudulently",
+            "status": "convicted",
+            "penalty": "2 years imprisonment, PKR 500,000 fine"
+          },
+          {
+            "type": "Document Forgery",
+            "date": "2022-03-15",
+            "description": "Forged CNIC and passport for loan application (loan amount: PKR 800,000)",
+            "status": "convicted",
+            "penalty": "3 years imprisonment"
+          }
+        ],
+        "risk_level": "high",
+        "last_updated": "2026-02-20",
+        "source": "FIA Fraud Registry / SBP Watchlist",
+        "status": "AUTO-REJECT - Multiple Convictions",
+        "flags": [
+          "CONVICTED_FRAUDSTER",
+          "REPEAT_OFFENDER",
+          "AML_VIOLATION"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-06-01T05:39:23.636377",
+      "cnic": "12345-6789012-3",
+      "customer_name": "dgdf",
+      "action": "REJECT",
+      "officer_name": "v",
+      "notes": "n",
+      "trust_score": 0,
+      "criminal_record": {
+        "has_criminal_record": true,
+        "crimes": [
+          {
+            "type": "Identity Fraud",
+            "date": "2023-08-10",
+            "description": "Used fake identity documents to open bank accounts fraudulently",
+            "status": "convicted",
+            "penalty": "2 years imprisonment, PKR 500,000 fine"
+          },
+          {
+            "type": "Document Forgery",
+            "date": "2022-03-15",
+            "description": "Forged CNIC and passport for loan application (loan amount: PKR 800,000)",
+            "status": "convicted",
+            "penalty": "3 years imprisonment"
+          }
+        ],
+        "risk_level": "high",
+        "last_updated": "2026-02-20",
+        "source": "FIA Fraud Registry / SBP Watchlist",
+        "status": "AUTO-REJECT - Multiple Convictions",
+        "flags": [
+          "CONVICTED_FRAUDSTER",
+          "REPEAT_OFFENDER",
+          "AML_VIOLATION"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "cnic": "12345-6789012-3",
+  "saved_at": "2026-06-01T13:39:22.061624",
+  "image_paths": {
+    "front_raw": "verification_data\\cnic_archive\\12345_6789012_3\\front_raw.jpg",
+    "front_enhanced": "verification_data\\cnic_archive\\12345_6789012_3\\front_enhanced.jpg",
+    "back_raw": "verification_data\\cnic_archive\\12345_6789012_3\\back_raw.jpg",
+    "face": "verification_data\\cnic_archive\\12345_6789012_3\\face.jpg",
+    "doc": "verification_data\\cnic_archive\\12345_6789012_3\\doc.jpg"
+  },
+  "extracted_data": {
+    "cnic": "12345-6789012-3",
+    "name": "Hassan Ali (Flagged)",
+    "father_name": "Muhammad Ali",
+    "date_of_birth": "01/01/1985",
+    "address": "Unknown \u00e2\u20ac\u201d flagged applicant"
+  },
+  "verification_count": 2,
+  "first_saved_at": "2026-06-01T13:33:36.863707"
+}

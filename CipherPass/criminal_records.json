@@ -1,0 +1,214 @@
+{
+  "42101-1234567-1": {
+    "has_criminal_record": false,
+    "crimes": [],
+    "risk_level": "low",
+    "last_updated": "2026-05-01",
+    "source": "National AML Watchlist (Demo)",
+    "status": "CLEAN - Approved Customer"
+  },
+  "35202-2345678-2": {
+    "has_criminal_record": false,
+    "crimes": [],
+    "risk_level": "low",
+    "last_updated": "2026-05-01",
+    "source": "National AML Watchlist (Demo)",
+    "status": "CLEAN - Approved Customer"
+  },
+  "12345-6789012-3": {
+    "has_criminal_record": true,
+    "crimes": [
+      {
+        "type": "Identity Fraud",
+        "date": "2023-08-10",
+        "description": "Used fake identity documents to open bank accounts fraudulently",
+        "status": "convicted",
+        "penalty": "2 years imprisonment, PKR 500,000 fine"
+      },
+      {
+        "type": "Document Forgery",
+        "date": "2022-03-15",
+        "description": "Forged CNIC and passport for loan application (loan amount: PKR 800,000)",
+        "status": "convicted",
+        "penalty": "3 years imprisonment"
+      }
+    ],
+    "risk_level": "high",
+    "last_updated": "2026-02-20",
+    "source": "FIA Fraud Registry / SBP Watchlist",
+    "status": "AUTO-REJECT - Multiple Convictions",
+    "flags": ["CONVICTED_FRAUDSTER", "REPEAT_OFFENDER", "AML_VIOLATION"]
+  },
+  "11111-2222222-3": {
+    "has_criminal_record": true,
+    "crimes": [
+      {
+        "type": "Bank Fraud",
+        "date": "2023-11-25",
+        "description": "Participated in large-scale bank fraud scheme affecting 47 customers",
+        "status": "convicted",
+        "penalty": "5 years imprisonment, PKR 2,000,000 fine"
+      },
+      {
+        "type": "Money Laundering",
+        "date": "2024-02-14",
+        "description": "Laundered money through multiple bank accounts (amount: PKR 15 crores)",
+        "status": "under_investigation",
+        "penalty": "Pending trial"
+      },
+      {
+        "type": "Identity Theft",
+        "date": "2022-09-30",
+        "description": "Stole identities of 12 victims to obtain credit cards and make fraudulent purchases",
+        "status": "convicted",
+        "penalty": "4 years imprisonment"
+      }
+    ],
+    "risk_level": "high",
+    "last_updated": "2026-05-01",
+    "source": "FIA Fraud Registry / Counter-Terrorism Department",
+    "status": "AUTO-REJECT - HIGH RISK OFFENDER",
+    "flags": ["ACTIVE_INVESTIGATION", "MONEY_LAUNDERING", "TERRORISM_LINK", "IDENTITY_THEFT"]
+  },
+  "54321-0987654-1": {
+    "has_criminal_record": true,
+    "crimes": [
+      {
+        "type": "Signature Forgery",
+        "date": "2024-01-20",
+        "description": "Forged signatures on 8 financial documents to obtain unauthorized loans",
+        "status": "convicted",
+        "penalty": "18 months imprisonment, PKR 300,000 fine"
+      }
+    ],
+    "risk_level": "medium",
+    "last_updated": "2026-03-10",
+    "source": "SBP Fraud Database",
+    "status": "MANUAL REVIEW REQUIRED",
+    "flags": ["DOCUMENT_FRAUD", "REQUIRES_COMPLIANCE_CHECK"]
+  },
+  "41101-5555555-5": {
+    "has_criminal_record": true,
+    "crimes": [
+      {
+        "type": "Cheque Bounce",
+        "date": "2025-06-15",
+        "description": "Issued 3 bounced cheques totaling PKR 500,000 (insufficient funds)",
+        "status": "convicted",
+        "penalty": "6 months jail, PKR 100,000 fine"
+      },
+      {
+        "type": "Loan Default",
+        "date": "2025-03-01",
+        "description": "Defaulted on personal loan from bank (outstanding: PKR 750,000)",
+        "status": "active_case",
+        "penalty": "Legal action ongoing"
+      }
+    ],
+    "risk_level": "medium",
+    "last_updated": "2026-05-10",
+    "source": "SBP Credit Information Bureau",
+    "status": "MANUAL REVIEW - Financial Delinquency",
+    "flags": ["LOAN_DEFAULT", "CHEQUE_BOUNCE", "HIGH_LIABILITY"]
+  },
+  "33201-7777777-7": {
+    "has_criminal_record": true,
+    "crimes": [
+      {
+        "type": "Mobile SIM Fraud",
+        "date": "2024-08-22",
+        "description": "Obtained multiple SIM cards using forged CNIC to conduct financial fraud",
+        "status": "convicted",
+        "penalty": "1 year imprisonment, PKR 200,000 fine"
+      },
+      {
+        "type": "Online Shopping Fraud",
+        "date": "2024-05-10",
+        "description": "Conducted unauthorized online transactions using stolen credit card details",
+        "status": "convicted",
+        "penalty": "18 months imprisonment"
+      }
+    ],
+    "risk_level": "high",
+    "last_updated": "2026-04-15",
+    "source": "PTA Cybercrime Registry / CCPP",
+    "status": "AUTO-REJECT - Cybercrime Offender",
+    "flags": ["CYBERCRIME", "SIM_FRAUD", "IDENTITY_MISUSE"]
+  },
+  "44401-8888888-8": {
+    "has_criminal_record": true,
+    "crimes": [
+      {
+        "type": "ATM Card Cloning",
+        "date": "2024-11-03",
+        "description": "Cloned ATM cards and withdrew PKR 400,000 from multiple accounts",
+        "status": "convicted",
+        "penalty": "2 years imprisonment, PKR 600,000 fine"
+      }
+    ],
+    "risk_level": "high",
+    "last_updated": "2026-05-05",
+    "source": "CIB / Bank Fraud Alert",
+    "status": "AUTO-REJECT - Card Fraud Specialist",
+    "flags": ["CARD_CLONING", "SKIMMING_SUSPECT"]
+  },
+  "31101-9999999-9": {
+    "has_criminal_record": true,
+    "crimes": [
+      {
+        "type": "Microfinance Loan Fraud",
+        "date": "2025-01-17",
+        "description": "Defaulted on microfinance loans totaling PKR 2,000,000 across 3 branches",
+        "status": "active_case",
+        "penalty": "Legal proceedings in progress"
+      }
+    ],
+    "risk_level": "medium",
+    "last_updated": "2026-05-08",
+    "source": "Microfinance Institutions Regulatory Authority",
+    "status": "MANUAL REVIEW - Serial Defaulter",
+    "flags": ["MICROFINANCE_FRAUD", "SERIAL_DEFAULT", "CREDIT_RISK"]
+  },
+  "37701-1010101-1": {
+    "has_criminal_record": true,
+    "crimes": [
+      {
+        "type": "Hawala Fraud",
+        "date": "2024-09-05",
+        "description": "Operated illegal hawala network, money moved through bank account (PKR 50 crores)",
+        "status": "under_investigation",
+        "penalty": "Under FIA/FBR investigation"
+      }
+    ],
+    "risk_level": "high",
+    "last_updated": "2026-05-12",
+    "source": "FIA Hawala/Hundi Task Force",
+    "status": "AUTO-REJECT - Money Laundering Suspect",
+    "flags": ["MONEY_LAUNDERING", "TERRORIST_FINANCING", "SANCTIONS_LIST"]
+  },
+  "39901-1111111-2": {
+    "has_criminal_record": false,
+    "crimes": [],
+    "risk_level": "low",
+    "last_updated": "2026-05-22",
+    "source": "National AML Watchlist",
+    "status": "CLEAN - Can Approve"
+  },
+  "43301-1212121-3": {
+    "has_criminal_record": true,
+    "crimes": [
+      {
+        "type": "Unauthorized Remittance",
+        "date": "2025-02-20",
+        "description": "Sent remittance to flagged country without proper documentation (North Korea)",
+        "status": "flagged",
+        "penalty": "Account frozen, under investigation"
+      }
+    ],
+    "risk_level": "high",
+    "last_updated": "2026-05-18",
+    "source": "FBR / UN Sanctions Committee",
+    "status": "AUTO-REJECT - International Sanctions Violation",
+    "flags": ["SANCTIONS_VIOLATION", "EXPORT_CONTROL", "TERROR_FINANCING"]
+  }
+}

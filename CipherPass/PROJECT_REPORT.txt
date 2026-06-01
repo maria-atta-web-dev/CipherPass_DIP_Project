@@ -1,0 +1,259 @@
+================================================================================
+PAKISTAN BANK KYC & AML FRAUD DETECTION SYSTEM
+PROJECT REPORT — Digital Image Processing (DIP)
+================================================================================
+
+PROJECT TITLE:
+Pakistan Banking KYC (Know Your Customer) & AML Customer Screening System
+using Digital Image Processing and Computer Vision
+
+SUBMITTED BY: [Your Name] | [Roll Number] | [Department] | [Institution]
+DATE: May 2026
+
+================================================================================
+TABLE OF CONTENTS
+================================================================================
+1. Abstract
+2. Introduction & Pakistan Industry Context
+3. Problem Statement
+4. Objectives
+5. System Architecture (5 Modules)
+6. Digital Image Processing (DIP) — Detailed
+7. AML & Criminal Record Module
+8. Technology Stack & Code Structure
+9. Implementation & Features
+10. Testing & Demo Cases
+11. Conclusion & Future Scope
+12. References
+
+================================================================================
+1. ABSTRACT
+================================================================================
+
+This project implements an automated customer screening system for Pakistani banks
+and financial institutions. When a person applies to open a bank account, the system
+validates their CNIC (NADRA format), checks criminal and fraud databases (AML),
+verifies face liveness, analyzes CNIC images for forgery using Digital Image
+Processing, and generates a trust score and decision (APPROVE / MANUAL REVIEW /
+REJECT). The system demonstrates core DIP concepts including grayscale conversion,
+histogram equalization, Gaussian blur, Canny edge detection, CLAHE, and Laplacian
+variance. It aligns with State Bank of Pakistan (SBP) customer due diligence
+requirements and the Federal Investigation Agency (FIA) criminal screening process.
+
+================================================================================
+2. INTRODUCTION & PAKISTAN INDUSTRY CONTEXT
+================================================================================
+
+Pakistani banks (HBL, UBL, Meezan Bank, Bank Alfalah) and mobile wallets (JazzCash,
+Easypaisa) must verify every customer before account opening. NADRA issues the CNIC
+which is the primary identity document. The State Bank of Pakistan enforces
+Anti-Money Laundering (AML) rules — banks must screen customers against fraud and
+criminal databases. The Federal Investigation Agency (FIA) maintains a criminal and
+fraud registry that banks reference during account opening.
+
+Manual verification is slow and cannot detect sophisticated forged CNICs or
+photo-based impersonation. This software simulates a branch KYC terminal where the
+teller enters CNIC, runs instant AML + FIA criminal lookup, captures face and
+documents, and receives a trust score with approve/reject decision.
+
+================================================================================
+3. PROBLEM STATEMENT
+================================================================================
+
+- Manual KYC is slow at busy branches
+- Fake CNIC and tampered documents cause identity fraud
+- No single screen showing criminal history + previous verification attempts
+- Banks cannot detect duplicate/repeat verification fraud (account takeover)
+- Difficulty proving DIP concepts without visible processing steps
+- Need for audit trail of each verification (regulatory requirement)
+
+================================================================================
+4. OBJECTIVES
+================================================================================
+
+Primary:
+1. 5-module banking verification architecture
+2. Apply DIP concepts with visible pipeline (dip_pipeline.py)
+3. Pakistan CNIC validation (pakistan_kyc.py)
+4. Criminal/fraud database integration (AML + FIA simulation)
+5. Duplicate detection — flag repeated verifications as fraud
+6. Persistent verification history (cnic_archive.py, history.json)
+7. Compliance officer workflow with REPORT_FIA action
+
+Secondary:
+8. Trust scoring with criminal record penalties
+9. Real-time face detection with Haar Cascade
+10. Student-presentable documentation
+
+================================================================================
+5. SYSTEM ARCHITECTURE (5 MODULES)
+================================================================================
+
+MODULE 1 — USER INPUT (main.py)
+  CNIC upload, live face capture, manual data entry, CNIC image upload
+
+MODULE 2 — DIP PREPROCESSING (dip_pipeline.py, cnic_processor.py)
+  Grayscale, histogram equalization, Gaussian blur, Canny edges, CLAHE
+
+MODULE 3 — FACE VERIFICATION (face_module.py)
+  Haar cascade face detection, Laplacian liveness check, face scoring
+
+MODULE 4 — DOCUMENT + DATABASE CHECK (document_module.py, customer_screening.py)
+  CNIC forgery detection, bank database lookup, FIA criminal record lookup,
+  duplicate/repeat verification detection
+
+MODULE 5 — RISK ENGINE + DASHBOARD (scoring.py, main.py)
+  Weighted trust score, criminal record penalty, APPROVE/REJECT/REPORT_FIA decision,
+  compliance officer review dialog, session archiving
+
+================================================================================
+6. DIGITAL IMAGE PROCESSING (DIP) — DETAILED
+================================================================================
+
+Concept               | File                 | OpenCV Function  | Purpose
+----------------------|----------------------|------------------|---------------------------
+Grayscale             | dip_pipeline.py      | cvtColor BGR2GRAY| Reduce channels
+Histogram Equalization| dip_pipeline.py      | equalizeHist     | Lighting normalization
+Gaussian Blur         | dip_pipeline.py      | GaussianBlur     | Noise reduction
+Canny Edge Detection  | dip_pipeline.py      | Canny            | Boundaries & forgery
+CLAHE                 | cnic_processor.py    | createCLAHE      | Local contrast enhancement
+Laplacian Variance    | face_module.py       | Laplacian        | Liveness & blur detection
+Haar Cascade          | main.py/face_module  | CascadeClassifier| Real-time face detection
+Contours              | document_module.py   | findContours     | Document shape analysis
+Perspective Transform | document_module.py   | warpPerspective  | CNIC deskewing
+
+DIP DEMO:
+  Button "Show DIP Processing Steps" displays 6 images: Original -> Grayscale ->
+  Equalized -> Blur -> Canny -> Enhanced — for step-by-step demonstration.
+
+================================================================================
+7. AML & CRIMINAL RECORD MODULE
+================================================================================
+
+File: customer_screening.py, criminal_records.json
+
+On CNIC lookup:
+  1. Search citizen_database.json (bank customers)
+  2. Search criminal_records.json (FIA-style criminal watchlist)
+  3. Load previous verifications from verification_data/history.json
+  4. Detect duplicates: if same CNIC verified 3+ times = fraud alert
+  5. Output decision: APPROVE, MANUAL REVIEW, or REJECT
+
+Compliance Officer Actions (ComplianceReviewDialog):
+  - REJECT         — Block account opening
+  - ESCALATE       — Send to branch manager
+  - INVESTIGATE    — Request more documents
+  - REPORT_FIA     — Report to Federal Investigation Agency
+  - HOLD           — Pending further review
+
+Demo CNICs for testing:
+  42101-1234567-1 — Clean customer (APPROVE)
+  12345-6789012-3 — Identity fraud + document forgery (REJECT)
+  11111-2222222-3 — Bank fraud + money laundering (REJECT)
+  54321-0987654-1 — Signature forgery, medium risk (MANUAL REVIEW)
+  33201-7777777-7 — SIM fraud + cybercrime (REJECT)
+  44401-8888888-8 — ATM card cloning (REJECT)
+  43301-1212121-3 — Sanctions violation (REJECT)
+  41101-5555555-5 — Loan default + cheque bounce (MANUAL REVIEW)
+
+Trust score penalties:
+  - Has criminal record  : -40 points
+  - REJECT decision      : -25 points
+  - Name mismatch        : -35 points
+
+================================================================================
+8. TECHNOLOGY STACK & CODE STRUCTURE
+================================================================================
+
+Python 3.11 | PyQt5 (GUI) | OpenCV 4.x | NumPy | JSON storage
+
+Core files:
+  main.py               — Application & 5-module flow + compliance review
+  dip_pipeline.py       — DIP demonstration pipeline (6 steps)
+  pakistan_kyc.py       — CNIC validation, SBP context
+  customer_screening.py — AML + FIA criminal lookup + duplicate detection
+  face_module.py        — Face detection & liveness
+  document_module.py    — CNIC document analysis
+  scoring.py            — Trust score calculation
+  cnic_processor.py     — CNIC image enhancement
+  cnic_archive.py       — Session history & archive
+  person_search.py      — Customer search utilities
+  utils.py              — UI helper functions
+  ui_styles.py          — Application styling
+
+Data files:
+  citizen_database.json — Bank customer records
+  criminal_records.json — FIA/AML criminal watchlist (demo data)
+
+Generated at runtime:
+  verification_data/history.json                  — All KYC session records
+  verification_data/compliance_decisions.json     — Officer decisions
+  verification_data/cnic_archive/<CNIC>/          — Per-person archives
+
+================================================================================
+9. IMPLEMENTATION & KEY FEATURES
+================================================================================
+
+1. Instant CNIC lookup — criminal check and history before full verification
+2. Pre-verification warning — popup alert if criminal record detected
+3. Duplicate detection — warns if CNIC verified 3+ times (account takeover)
+4. DIP pipeline — 6-step visible enhancement for academic demonstration
+5. Compliance review dialog — officer records action including REPORT_FIA
+6. Trust score — weighted formula: face (40%) + document (35%) + signature (25%)
+7. Session archiving — every verification saved with timestamp and outcome
+
+================================================================================
+10. TESTING & DEMO CASES
+================================================================================
+
+CLEAN CUSTOMERS:
+  CNIC: 42101-1234567-1 — Ahmed Raza
+  Expected: APPROVE, Score ~87/100, no criminal record
+
+CRIMINALS — AUTO-REJECT:
+  CNIC: 12345-6789012-3 — Identity Fraud + Document Forgery
+  CNIC: 11111-2222222-3 — Bank Fraud + Money Laundering
+  CNIC: 33201-7777777-7 — SIM Fraud + Cybercrime
+  CNIC: 44401-8888888-8 — ATM Card Cloning
+  CNIC: 43301-1212121-3 — International Sanctions Violation
+  Expected: All show criminal warning popup + compliance review dialog
+
+MANUAL REVIEW:
+  CNIC: 54321-0987654-1 — Signature Forgery
+  CNIC: 41101-5555555-5 — Loan Default + Cheque Bounce
+  Expected: MANUAL REVIEW status + compliance dialog
+
+DUPLICATE DETECTION TEST:
+  Verify any CNIC 3 or more times to trigger the duplicate fraud alert popup.
+  Expected: Warning showing N previous verifications + DUPLICATE ALERT in right panel
+
+================================================================================
+11. CONCLUSION & FUTURE SCOPE
+================================================================================
+
+Successfully built a Pakistan banking KYC prototype using DIP for document/face
+analysis and AML-style criminal screening. The system detects criminals at first
+lookup before full verification, flags duplicate verifications as fraud attempts,
+and provides a compliance officer workflow including FIA reporting. It aligns with
+SBP-regulated compliance, NADRA CNIC standards, and FIA fraud registry procedures.
+
+Future scope:
+- Integration with live NADRA and FIA APIs
+- Deep learning face recognition (FaceNet / DeepFace)
+- OCR-based CNIC text extraction
+- Mobile application for field verification
+
+================================================================================
+12. REFERENCES
+================================================================================
+
+1. State Bank of Pakistan — AML/CFT Regulations
+2. NADRA — CNIC Format and Verification Standards
+3. FIA — Federal Investigation Agency Fraud Registry (Pakistan)
+4. OpenCV Documentation — https://docs.opencv.org
+5. PyQt5 Documentation — https://doc.qt.io/qtforpython/
+6. Python 3 Official Documentation — https://docs.python.org
+
+================================================================================
+END OF REPORT
+================================================================================

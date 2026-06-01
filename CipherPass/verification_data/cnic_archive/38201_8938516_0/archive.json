@@ -1,0 +1,20 @@
+{
+  "cnic": "38201-8938516-0",
+  "saved_at": "2026-06-01T13:31:51.200556",
+  "image_paths": {
+    "front_raw": "verification_data\\cnic_archive\\38201_8938516_0\\front_raw.jpg",
+    "front_enhanced": "verification_data\\cnic_archive\\38201_8938516_0\\front_enhanced.jpg",
+    "back_raw": "verification_data\\cnic_archive\\38201_8938516_0\\back_raw.jpg",
+    "face": "verification_data\\cnic_archive\\38201_8938516_0\\face.jpg",
+    "doc": "verification_data\\cnic_archive\\38201_8938516_0\\doc.jpg"
+  },
+  "extracted_data": {
+    "cnic": "38201-8938516-0",
+    "name": "Maria Atta",
+    "father_name": "Atta Muhammad",
+    "date_of_birth": "12/06/2006",
+    "address": "vbvb"
+  },
+  "verification_count": 1,
+  "first_saved_at": "2026-06-01T13:31:51.200556"
+}
